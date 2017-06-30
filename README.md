@@ -17,6 +17,7 @@
 
 
 2、[几何体及网格](http://zouyang1230.com/project/threejs/meshMaterial.html)
+* 注释：Mesh几何体为groundGeom；通过MeshNormalMaterial作为几何体材质展示旋转色变（MeshNormalMaterial ：通过计算法向颜色来决定每个面颜色的材质）。
 ![几何体及网格示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/meshMaterial.gif)
 
 
