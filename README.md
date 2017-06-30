@@ -15,6 +15,12 @@
 1、[平面光3d光源](http://zouyang1230.com/project/threejs/areaLight.html)（该页面右上角各GUI参数可控制3d变化）
 * 该光源：属于复杂光源、使用它可以定义一个发光的矩形、此光源不再Three.js标准库中，而在它的扩展库中，它不能再使用渲染器WebGLRenderer对象了，而是使用渲染器WebGLDeferredRenderer，俗称延迟渲染器(使用此渲染器还需引入其他js，详见demo，才能使用延迟渲染器)，该渲染器专门处理复杂光源。
 
+
+2、[几何体及网格](http://zouyang1230.com/project/threejs/meshMaterial.html)
+![几何体及网格示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/meshMaterial.gif)
+
+
+
 2、[多米诺骨牌](http://zouyang1230.com/project/threejs/card.html)
 
 ![多米诺骨牌示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dmngp.gif)
