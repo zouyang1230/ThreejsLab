@@ -31,7 +31,7 @@
 
 5、[创建粒子材质](http://zouyang1230.com/project/threejs/pointCloud.html)
 * 实例化new THREE.ParticleBasicMaterial(),创建粒子材质，该材质有9个可控属性<br />
-![创建粒子材质示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/pointCloud.jpg)
+![创建粒子材质示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/pointCloud.gif)
 <br /><br />
 
 6、[创建下雨3d动画](http://zouyang1230.com/project/threejs/rainyScene.html)
