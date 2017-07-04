@@ -24,6 +24,25 @@
 ![osper曲线示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/lineMaterial.gif)
 <br /><br />
 
+4、[创建三维文本](http://zouyang1230.com/project/threejs/textGeometry.html)
+* 实例化new THREE.TextGeometry(),并操作相关属性即可<br />
+![创建三维文本示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/textGeometry.jpg)
+<br /><br />
+
+5、[创建粒子材质](http://zouyang1230.com/project/threejs/pointCloud.html)
+* 实例化new THREE.ParticleBasicMaterial(),创建粒子材质，该材质有9个可控属性<br />
+![创建粒子材质示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/pointCloud.jpg)
+<br /><br />
+
+6、[创建下雨3d动画](http://zouyang1230.com/project/threejs/rainyScene.html)
+* 使用ParticleBasicMaterial的map属性来加载外部图片；并使用 THREE.AdditiveBlending融合模式，此模式会在画新像素时，背景像素的颜色会被添加到新像素上<br />
+![创建下雨3d动画](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/rainyScene.gif)
+<br /><br />
+
+7、[创建下雪3d动画](http://zouyang1230.com/project/threejs/snowyScene.html)<br />
+![创建下雨3d动画](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/snowyScene.gif)
+<br /><br />
+
 、[多米诺骨牌](http://zouyang1230.com/project/threejs/card.html)
 ![多米诺骨牌示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dmngp.gif)
 
