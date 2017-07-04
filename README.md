@@ -1,8 +1,7 @@
-﻿# ThreejsDemos
+﻿# ThreejsLab
 
-使用 Threejs 实现的3D效果demo。
+使用 Threejs 的3D效果demo。
 
-记录自己学习的一个过程。
 
 所有项目均使用了2个开发环境用的测试辅助库：
 *  stats.js性能监视器来监视3d性能，详见各个demo左上角（它的介绍在 <https://github.com/mrdoob/stats.js> ）
