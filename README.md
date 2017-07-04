@@ -1,7 +1,8 @@
-﻿# ThreejsLab
+﻿# ThreejsDemos
 
-使用 Threejs 的3D效果demo。
+使用 Threejs 实现的3D效果demo。
 
+记录自己学习的一个过程。
 
 所有项目均使用了2个开发环境用的测试辅助库：
 *  stats.js性能监视器来监视3d性能，详见各个demo左上角（它的介绍在 <https://github.com/mrdoob/stats.js> ）
@@ -17,11 +18,14 @@
 
 2、[几何体及网格](http://zouyang1230.com/project/threejs/meshMaterial.html)
 * 注释：Mesh几何体为groundGeom；通过MeshNormalMaterial作为几何体材质展示旋转色变（MeshNormalMaterial ：通过计算法向颜色来决定每个面颜色的材质）。<br />
-![几何体及网格示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/meshMaterial.gif)
+![几何体及网格示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/meshMaterial.gif)<br />
+
+3、[gosper曲线](http://zouyang1230.com/project/threejs/lineMaterial.html)
+* gosper()，该函数返回的是一个gosper曲线。wiki有相关介绍：（ <https://en.wikipedia.org/wiki/Gosper_curve> ）<br />
+![osper曲线示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/lineMaterial.gif)<br />
 
 
-
-2、[多米诺骨牌](http://zouyang1230.com/project/threejs/card.html)
+、[多米诺骨牌](http://zouyang1230.com/project/threejs/card.html)
 
 ![多米诺骨牌示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dmngp.gif)
 
