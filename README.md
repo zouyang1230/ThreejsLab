@@ -43,8 +43,107 @@
 ![创建下雨3d动画](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/snowyScene.gif)
 <br /><br />
 
-、[多米诺骨牌](http://zouyang1230.com/project/threejs/card.html)
-![多米诺骨牌示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dmngp.gif)
+8、[基础材质应用](http://zouyang1230.com/project/threejs/basicTexture.html)
+* 使用THREE.ImageUtils.loadTexture 来加载一个外部图片
+* threejs内有2种材质对光源产生反应：MeshLamberMaterial  和  MeshPhongMaterial，MeshPhongMaterial一般用于创建光亮表面<br />
+![基础材质应用](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/basicTexture.gif)
+<br /><br />
+
+9、[基础材质应用2](http://zouyang1230.com/project/threejs/normalMap.html)
+* 使用THREE.UniformsUtils的clone方法
+* 创建立方体BoxGeometry<br />
+![基础材质应用2](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/normalMap.gif)
+<br /><br />
+
+10、[构建真实动态3d场景](http://zouyang1230.com/project/threejs/dynamic.html)<br />
+![构建真实动态3d场景](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dynamic.gif)
+<br /><br />
+
+
+# 以下是一些记录：
+1、Three.js本质上是Webgl，如果你的浏览器不支持Webgl，那么肯定你就不能完整的运行Three.js。支持Webgl的浏览器很多，例如Chrome、FireFox、360安 全浏览器6.0等，而IE浏览器对Webgl标准的支持就不太好。<br />
+
+2、在Three.js中，要渲染物体到网页中，我们需要3个组件：场景（scene）、相机（camera）和渲染器（renderer）。有了这三样东西，才能将物体渲染到网页中去。
+```javascript
+var scene = new THREE.Scene();	// 场景
+
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);// 透视相机
+
+var renderer = new THREE.WebGLRenderer();	// 渲染器
+
+renderer.setSize(window.innerWidth, window.innerHeight);	// 设置渲染器的大小为窗口的内宽度，也就是内容区的宽度
+document.body.appendChild(renderer.domElement);
+```
+
+3、场景与相机
+* 1）场景只有一种，用THREE.Scene来表示，通过new THREE.Scene();
+* 2）相机有2种，决定了场景中那个角度的景色会显示出来。
+* 透视投影相机：THREE.PerspectiveCamera
+* 正投影相机：THREE.OrthographicCamera ( left, right, top, bottom, near, far )  里面的参数分别代表各个面与相机镜头中心点的垂直距离。
+
+4、Threejs使用的是右手坐标系，这源于opengl默认情况下，也是右手坐标系。
+
+5、和three.js紧密结合的动画引擎是Tween.js,可以再https://github.com/sole下载。
+```
+1）引入js<br />
+2）构建对象：<br />
+function initTween()
+{
+    new TWEEN.Tween( mesh.position)
+            .to( { x: -400 }, 3000 ).repeat( Infinity ).start();
+}
+TWEEN.Tween的构造函数接受的是要改变属性的对象，这里传入的是mesh的位置。
+Tween的任何一个函数返回的都是自身，所以可以用串联的方式直接调用各个函数。
+to函数，接受两个参数：
+第一个参数是一个集合，里面存放的键值对，键x表示mesh.position的x属性，值-400表示，动画结束的时候需要移动到的位置。
+第二个参数，是完成动画需要的时间，这里是3000ms。
+repeat( Infinity )表示重复无穷次，也可以接受一个整形数值，例如5次。
+Start表示开始动画，默认情况下是匀速的将mesh.position.x移动到-400的位置。
+3)渲染函数中执行：TWEEN.update();
+```
+
+6、Threejs中的各种光源：
+* 光源基类 THREE.Light ( hex )
+```
+参数hex，接受一个16进制的颜色值。例如要定义一种红色的光源，我们可以这样来定义：
+var redLight = new THREE.Light(0xFF0000);
+```
+* 由基类派生出来的其他种类光源
+
+7、环境光<br />
+是经过多次反射而来的光称为环境光，无法确定其最初的方向。环境光是一种无处不在的光。环境光源放出的光线被认为来自任何方向。因此，当你仅为场景指定环境光时，所有的物体无论法向量如何，都将表现为同样的明暗程度。 （这是因为，反射光可以从各个方向进入您的眼睛）
+构造函数 : THREE.AmbientLight( hex )
+var light = new THREE.AmbientLight( 0xff0000 );
+scene.add( light );
+
+8、聚光灯<br />
+构造：THREE.SpotLight( hex, intensity, distance, angle, exponent )	
+这种光源的光线从一个锥体中射出，在被照射的物体上产生聚光的效果。
+使用这种光源需要指定光的射出方向以及锥体的顶角α。
+
+
+9、方向光（平行光）  
+* 它是一组没有衰减的平行的光线，类似太阳光的效果。
+* THREE.DirectionalLight = function ( hex, intensity )
+
+10、点光源	
+* 点光源的特点是发光部分为一个小圆面，近似一个点
+* 是理想化为质点的向四面八方发出光线的光源。点光源是抽象化了的物理概念，为了把物理问题的研究简单化。就像平时说的光滑平面，质点，无空气阻力一样，点光源在现实中也是不存在的，指的是从一个点向周围空间均匀发光的光源。
+* 点光源不会产生投影，原因是光源是朝所有方向发出，计算阴影对GPU来说，负担太重。
+
+### 省略一大坨
+```
+ 笔记太多，还有配图等等，上面的内容还算省略了的，一些配图和代码都没贴，如有需要的童鞋可以私信我 7012490
+```
+
+
+
+
+
+
+
+
+
 
 
 
