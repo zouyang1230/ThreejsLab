@@ -56,7 +56,7 @@
 <br /><br />
 
 10、[构建真实动态3d场景](http://zouyang1230.com/project/threejs/dynamic.html)<br />
-* 拖动鼠标可360度查看全景，整个场景是由6张jpg图片够成。
+* 拖动(滚动)鼠标可360度查看全景，整个场景是由6张jpg图片够成。
 ![构建真实动态3d场景](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dynamic.gif)
 <br /><br />
 
