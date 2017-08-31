@@ -84,7 +84,7 @@ document.body.appendChild(renderer.domElement);
 
 4、Threejs使用的是右手坐标系，这源于opengl默认情况下，也是右手坐标系。
 
-5、和three.js紧密结合的动画引擎是Tween.js,可以再https://github.com/sole下载。
+5、和three.js紧密结合的动画引擎是Tween.js,可以在这里下载 https://github.com/sole
 ```
 1）引入js<br />
 2）构建对象：<br />
