@@ -10,54 +10,54 @@
 (所有demo页右上角有`GUI渲染控制器`，可通过调节它来控制页面的3d效果变化)
 
 
-1、[平面光3d光源](http://zouyang1230.com/project/threejs/areaLight.html)（该页面右上角各GUI参数可控制3d变化）
+1、[平面光3d光源](http://imzouyang.com/project/threejs/areaLight.html)（该页面右上角各GUI参数可控制3d变化）
 * 该光源：属于复杂光源、使用它可以定义一个发光的矩形、此光源不再Three.js标准库中，而在它的扩展库中，它不能再使用渲染器WebGLRenderer对象了，而是使用渲染器WebGLDeferredRenderer，俗称延迟渲染器(使用此渲染器还需引入其他js，详见demo，才能使用延迟渲染器)，该渲染器专门处理复杂光源。
 <br /><br />
 
-2、[几何体及网格](http://zouyang1230.com/project/threejs/meshMaterial.html)
+2、[几何体及网格](http://imzouyang.com/project/threejs/meshMaterial.html)
 * 注释：Mesh几何体为groundGeom；通过MeshNormalMaterial作为几何体材质展示旋转色变（MeshNormalMaterial ：通过计算法向颜色来决定每个面颜色的材质）。<br />
 ![几何体及网格示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/meshMaterial.gif)
 <br /><br />
 
-3、[gosper曲线](http://zouyang1230.com/project/threejs/lineMaterial.html)
+3、[gosper曲线](http://imzouyang.com/project/threejs/lineMaterial.html)
 * gosper()，该函数返回的是一个gosper曲线。wiki有相关介绍：（ <https://en.wikipedia.org/wiki/Gosper_curve> ）<br />
 ![osper曲线示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/lineMaterial.gif)
 <br /><br />
 
-4、[创建三维文本](http://zouyang1230.com/project/threejs/textGeometry.html)
+4、[创建三维文本](http://imzouyang.com/project/threejs/textGeometry.html)
 * 实例化new THREE.TextGeometry(),并操作相关属性即可<br />
 ![创建三维文本示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/textGeometry.jpg)
 <br /><br />
 
-5、[创建粒子材质](http://zouyang1230.com/project/threejs/pointCloud.html)
+5、[创建粒子材质](http://imzouyang.com/project/threejs/pointCloud.html)
 * 实例化new THREE.ParticleBasicMaterial(),创建粒子材质，该材质有9个可控属性<br />
 ![创建粒子材质示意图](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/pointCloud.gif)
 <br /><br />
 
-6、[创建下雨3d动画](http://zouyang1230.com/project/threejs/rainyScene.html)
+6、[创建下雨3d动画](http://imzouyang.com/project/threejs/rainyScene.html)
 * 使用ParticleBasicMaterial的map属性来加载外部图片；并使用 THREE.AdditiveBlending融合模式，此模式会在画新像素时，背景像素的颜色会被添加到新像素上<br />
 ![创建下雨3d动画](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/rainyScene.gif)
 <br /><br />
 
-7、[创建下雪3d动画](http://zouyang1230.com/project/threejs/snowyScene.html)<br />
+7、[创建下雪3d动画](http://imzouyang.com/project/threejs/snowyScene.html)<br />
 ![创建下雨3d动画](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/snowyScene.gif)
 <br /><br />
 
-8、[基础材质应用](http://zouyang1230.com/project/threejs/basicTexture.html)
+8、[基础材质应用](http://imzouyang.com/project/threejs/basicTexture.html)
 * 使用THREE.ImageUtils.loadTexture 来加载一个外部图片
 * threejs内有2种材质对光源产生反应：MeshLamberMaterial  和  MeshPhongMaterial，MeshPhongMaterial一般用于创建光亮表面<br />
 ![基础材质应用](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/basicTexture.gif)
 <br /><br />
 
-9、[基础材质应用2](http://zouyang1230.com/project/threejs/normalMap.html)
+9、[基础材质应用2](http://imzouyang.com/project/threejs/normalMap.html)
 * 使用THREE.UniformsUtils的clone方法
 * 创建立方体BoxGeometry<br />
 ![基础材质应用2](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/normalMap.gif)
 <br /><br />
 
-10、[构建真实动态3d场景](http://zouyang1230.com/project/threejs/dynamic.html)<br />
+10、[构建真实动态3d场景](http://imzouyang.com/project/threejs/dynamic.html)<br />
 * 拖动(滚动)鼠标可360度查看全景，整个场景是由6张jpg图片够成。
-![构建真实动态3d场景](https://github.com/zouyang1230/ThreejsDemos/raw/master/images/dynamic.gif)
+![构建真实动态3d场景](c)
 <br /><br />
 
 
@@ -134,7 +134,7 @@ scene.add( light );
 
 ### 省略一大坨
 ```
- 更多详细笔记，如有需要的童鞋可以私信我 7012490
+ 更多详细笔记，如有需要的童鞋可以私信我邮箱
 ```
 
 
